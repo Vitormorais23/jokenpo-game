@@ -10,7 +10,7 @@
 <body>
     <main>
         <!-- Home -->
-        <div class="home">
+        <div class="home hidden">
             <h1 class="home__title">JOKENPÔ</h1>
             <!-- Botões -->
             <div class="options">
@@ -28,6 +28,31 @@
                 </button>
             </div>
             <p class="home__subtitle">escolha uma opção</p>
+        </div>
+        <!-- Placar -->
+        <div class="score">
+            <!-- Card score -->
+            <div class="score-card">
+                <div class="score-card__item">
+                    <!-- Jogador -->
+                    <img src="/assets/papel-green.png" alt="ícone da jogada do jogador">
+                    <p class="score-card__text">VOCÊ</p>
+                    <p class="score-card__text">1</p>
+                </div>
+                <div class="score-card__item">
+                    <img src="/assets/guaxinim.png" alt="ícone do resultado da partida">
+                    <p class="score-card__text">GANHOU</p>
+                </div>
+                <div class="score-card__item">
+                    <!-- Maquina -->
+                    <img src="/assets/pedra-gray.png" alt="ícone da jogada da máquina">
+                    <p class="score-card__text">MÁQUINA</p>
+                    <p class="score-card__text">1</p>
+                </div>
+            </div>
+            <!-- Botões -->
+            <button>JOGAR NOVAMENTE</button>
+            <button>ZERAR PLACAR</button>
         </div>
     </main>
 </body>
