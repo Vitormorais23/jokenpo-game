@@ -10,19 +10,19 @@
 <body>
     <main>
         <!-- Home -->
-        <div class="home hidden">
+        <div class="home">
             <h1 class="home__title">JOKENPÔ</h1>
             <!-- Botões -->
             <div class="options">
-                <button class="options__item">
+                <button class="button options__item" onclick="jogar('pedra')">
                     <img src="/assets/pedra.png" alt="Icone de pedra">
                     <p class="options__text">PEDRA</p>
                 </button>
-                <button class="options__item">
+                <button class="button options__item" onclick="jogar('papel')">
                     <img src="/assets/papel.png" alt="Icone de papel">
                     <p class="options__text">PAPEL</p>
                 </button>
-                <button class="options__item">
+                <button class="button options__item" onclick="jogar('tesoura')">
                     <img src="/assets/tesoura.png" alt="Icone de tesoura">
                     <p class="options__text">TESOURA</p>
                 </button>
@@ -30,7 +30,7 @@
             <p class="home__subtitle">escolha uma opção</p>
         </div>
         <!-- Placar -->
-        <div class="score">
+        <div class="score hidden">
             <!-- Card score -->
             <div class="score-card">
                 <div class="score-card__item">
@@ -51,11 +51,10 @@
                 </div>
             </div>
             <!-- Botões -->
-           <div class="score__button">
-                <button class="buttons score__button-jogar">JOGAR NOVAMENTE</button>
-                <button class="buttons score__button-zerar">ZERAR PLACAR</button>
-           </div>
+            <button class="button text__button positive-button" onclick="jogarNovamente()">JOGAR NOVAMENTE</button>
+            <button class="button text__button negative-button" onclick="zerarPlacar()">ZERAR PLACAR</button>
         </div>
     </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
