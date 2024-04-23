@@ -27,6 +27,40 @@ function jogar(jogada) {
     } else if (resultado === RESULTADO.PERDEU) {
         console.log('Perdeu')   
     }
+
+    exibirJogadaJogador(jogada, resultado)
+
+    alternarLayouts()
+}
+
+function exibirJogadaJogador(jogada, resultado) {
+    // Recuperar elemento img do HTML
+    let img = document.getElementById('jogada-jogador-img')
+
+    let color = 'gray'
+
+    switch (resultado) {
+        case RESULTADO.GANHOU:
+            color = 'green'
+            break
+        case RESULTADO.PERDEU:
+            color = 'red'
+            break
+        default:
+            color = 'gray'
+            break    
+    }
+
+    img.src = `/assets/${jogada}-${color}.png`
+}
+
+function alternarLayouts() {
+    let home = document.getElementsByClassName('home')[0]
+    let score = document.getElementsByClassName('score')[0]
+
+    // toggle é como se fosse uma tomada ele liga e desliga a chamada, que nesse caso é o hidden
+    home.classList.toggle('hidden')
+    score.classList.toggle('hidden')
 }
 
 function obterResultado(jogada, jogadaMaquina) {
@@ -77,8 +111,12 @@ function getRandom(min, max) {
 
 function jogarNovamente() {
     console.log("jogar novamente")
+    
+    alternarLayouts()
 }
 
 function zerarPlacar() {
     console.log("zerar placar")
+    
+    alternarLayouts()
 }
