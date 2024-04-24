@@ -15,6 +15,12 @@ const OPCOES = {
 let placarJogador = 0
 let placarMaquina = 0
 
+// Verificar se existe valor armazenado no Storage, pois se tiver preciso recuperar esses dados
+if (localStorage.getItem('placarJogador')) {
+    placarJogador = Number.parseInt(localStorage.getItem('placarJogador'))
+    placarMaquina = Number.parseInt(localStorage.getItem('placarMaquina'))
+}
+
 function jogar(jogada) {
     // Obter jogada da maquina
     let jogadaMaquina = obterJogadaMaquina()
@@ -33,6 +39,9 @@ function jogar(jogada) {
 
     // Calcular o placar calcular ganhos e perdas
     atualizarPlacar(resultado)
+
+    // Salvar o placar das jogadas no Storage do navegador
+    salvarPlacar()
 
     // Atualizar placar
     exbirPlacar()
@@ -103,6 +112,11 @@ function atualizarPlacar(resultado) {
         // Contar ponto maquina
         placarMaquina++
     }
+}
+
+function salvarPlacar() {
+    localStorage.setItem('placarJogador', placarJogador)
+    localStorage.setItem('placarMaquina', placarMaquina)
 }
 
 function exbirPlacar() {
@@ -202,6 +216,15 @@ function jogarNovamente() {
 function zerarPlacar() {
     placarJogador = 0
     placarMaquina = 0
+
+    // Zerar o valor das var no Storage
+    // salvarPlacar() Funciona tbm
+    
+    localStorage.removeItem('placarJogador')
+    localStorage.removeItem('placarMaquina')
+    
+    // Outra forma, é útil mas perigoso pois apaga o banco de dados local todo
+    // localStorage.clear()
     
     alternarLayouts()
 }
