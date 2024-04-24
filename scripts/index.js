@@ -11,30 +11,31 @@ const OPCOES = {
     TE: 'tesoura'
 }
 
+// Placar do jogador e da máquina
+let placarJogador = 0
+let placarMaquina = 0
+
 function jogar(jogada) {
     // Obter jogada da maquina
     let jogadaMaquina = obterJogadaMaquina()
 
-    console.log(`Jogador: ${jogada} VS Maquina: ${jogadaMaquina}`)
-
     // Obter resultado da partida
     let resultado = obterResultado(jogada, jogadaMaquina)
 
-    if (resultado === RESULTADO.EMPATOU) {
-        console.log('Empate')
-    } else if (resultado === RESULTADO.GANHOU) {
-        console.log('Ganhou')   
-    } else if (resultado === RESULTADO.PERDEU) {
-        console.log('Perdeu')   
-    }
     // Exibir jogada do jogador 
     exibirJogadaJogador(jogada, resultado)
     
     // Exibir jogada da maquina 
     exibirJogadaMaquina(jogadaMaquina, resultado)
 
-    // Exibir o resultado
+    // Exibir o resultado - Se ganhou, perdeu ou empatou
     exibirResultado(resultado)
+
+    // Calcular o placar calcular ganhos e perdas
+    atualizarPlacar(resultado)
+
+    // Atualizar placar
+    exbirPlacar()
     
     // Alternar layouts de inicio e placar
     alternarLayouts()
@@ -92,6 +93,23 @@ function exibirResultado(resultado) {
     text.style.color = getComputedStyle(document.documentElement).getPropertyValue(textColor)
 }
 
+function atualizarPlacar(resultado) {
+    if (resultado === RESULTADO.GANHOU) {
+        // Contar ponto jogador
+        placarJogador++
+    } else if (resultado === RESULTADO.PERDEU) {
+        // Contar ponto maquina
+        placarMaquina++
+    }
+}
+
+function exbirPlacar() {
+    let placarJogadorText = document.getElementById('placar-jogador-text')
+    let placarMaquinaText = document.getElementById('placar-maquina-text')
+
+    placarJogadorText.innerText = placarJogador
+    placarMaquinaText.innerText = placarMaquina
+}
 function exibirJogadaMaquina(jogadaMaquina, resultado) {
     // Recuperar elemento img do HTML
     let img = document.getElementById('jogada-maquina-img')
@@ -169,13 +187,13 @@ function getRandom(min, max) {
   
 
 function jogarNovamente() {
-    console.log("jogar novamente")
     
     alternarLayouts()
 }
 
 function zerarPlacar() {
-    console.log("zerar placar")
+    placarJogador = 0
+    placarMaquina = 0
     
     alternarLayouts()
 }
