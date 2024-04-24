@@ -36,6 +36,8 @@ function jogar(jogada) {
 
     // Atualizar placar
     exbirPlacar()
+
+    adicionarAnimacao(resultado)
     
     // Alternar layouts de inicio e placar
     alternarLayouts()
@@ -133,11 +135,17 @@ function exibirJogadaMaquina(jogadaMaquina, resultado) {
 
 function alternarLayouts() {
     let home = document.getElementsByClassName('home')[0]
-    let score = document.getElementsByClassName('score')[0]
+    let score = getScoreElement()
 
     // toggle é como se fosse uma tomada ele liga e desliga a chamada, que nesse caso é o hidden
     home.classList.toggle('hidden')
     score.classList.toggle('hidden')
+}
+
+// Para não ficar repetindo código
+function getScoreElement() {
+    return document.getElementsByClassName('score')[0]
+
 }
 
 function obterResultado(jogada, jogadaMaquina) {
@@ -196,4 +204,19 @@ function zerarPlacar() {
     placarMaquina = 0
     
     alternarLayouts()
+}
+
+function adicionarAnimacao(resultado) {
+    let score = getScoreElement()
+    if (resultado === RESULTADO.PERDEU) {
+        score.classList.add('animate__shakeX')
+    } else if (resultado === RESULTADO.GANHOU) {
+        score.classList.add('animate__heartBeat')
+    } else {
+        score.classList.add('animate__fadeIn')
+    }
+    // Remover as animações sempre que as mesmas terminarem
+    score.addEventListener('animationend', () => {
+        score.classList.remove('animate__shakeX', 'animate__fadeIn', 'animate__heartBeat')
+    })
 }

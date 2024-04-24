@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="styles/style.css">
     <title>Jokenpô Game</title>
 </head>
+
 <body>
     <main>
         <!-- Home -->
-        <div class="home">
+        <div class="home animate__animated animate__fadeIn">
             <h1 class="home__title">JOKENPÔ</h1>
             <!-- Botões -->
             <div class="options">
@@ -30,7 +33,7 @@
             <p class="home__subtitle">escolha uma opção</p>
         </div>
         <!-- Placar -->
-        <div class="score hidden">
+        <div class="score hidden animate__animated">
             <!-- Card score -->
             <div class="score-card">
                 <div class="score-card__item">
@@ -41,7 +44,7 @@
                 </div>
                 <div class="score-card__item">
                     <img id="resultado-partida" src="/assets/guaxinim.png" alt="ícone do resultado da partida">
-                    <p id="resultado-texto" class="score-card__text">GANHOU</p>
+                    <p id="resultado-texto" class="score-card__text animate__animated animate__tada">GANHOU</p>
                 </div>
                 <div class="score-card__item">
                     <!-- Maquina -->
@@ -57,4 +60,5 @@
     </main>
     <script src="scripts/index.js"></script>
 </body>
+
 </html>
