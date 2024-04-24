@@ -21,7 +21,7 @@ html {
 body {
     height: 100vh;   
     background-color: black;
-    background-image: url("./assets/background.png");
+    background-image: url("/assets/background.png");
     background-position: center;
     background-size: cover;
 }
