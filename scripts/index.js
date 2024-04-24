@@ -70,7 +70,7 @@ function exibirJogadaJogador(jogada, resultado) {
             break    
     }
     // Mudar dinamicamente a imagem e a cor da imagem
-    img.src = `/assets/${jogada}-${color}.png`
+    img.src = `./assets/${jogada}-${color}.png`
 }
 
 function exibirResultado(resultado) {
@@ -98,7 +98,7 @@ function exibirResultado(resultado) {
             break
     }
 
-    img.src = `/assets/${res}.png`
+    img.src = `./assets/${res}.png`
     
     // Alterar cor do texto
     text.style.color = getComputedStyle(document.documentElement).getPropertyValue(textColor)
@@ -144,7 +144,7 @@ function exibirJogadaMaquina(jogadaMaquina, resultado) {
             break    
     }
 
-    img.src = `/assets/${jogadaMaquina}-${color}.png`
+    img.src = `./assets/${jogadaMaquina}-${color}.png`
 }
 
 function alternarLayouts() {
