@@ -27,9 +27,16 @@ function jogar(jogada) {
     } else if (resultado === RESULTADO.PERDEU) {
         console.log('Perdeu')   
     }
-
+    // Exibir jogada do jogador 
     exibirJogadaJogador(jogada, resultado)
+    
+    // Exibir jogada da maquina 
+    exibirJogadaMaquina(jogadaMaquina, resultado)
 
+    // Exibir o resultado
+    exibirResultado(resultado)
+    
+    // Alternar layouts de inicio e placar
     alternarLayouts()
 }
 
@@ -50,8 +57,60 @@ function exibirJogadaJogador(jogada, resultado) {
             color = 'gray'
             break    
     }
-
+    // Mudar dinamicamente a imagem e a cor da imagem
     img.src = `/assets/${jogada}-${color}.png`
+}
+
+function exibirResultado(resultado) {
+    let img = document.getElementById('resultado-partida')
+    let text = document.getElementById('resultado-texto')
+    let textColor = ''
+
+    let res = 'dino'
+
+    switch (resultado) {
+        case RESULTADO.GANHOU:
+            res = 'guaxinim'
+            text.innerText = 'GANHOU'
+            textColor = '--ganhou-color'
+            break
+        case RESULTADO.PERDEU:
+            res = 'morte'
+            text.innerText = 'PERDEU'
+            textColor = '--red-color'
+            break
+        default:
+            res = 'dino'
+            text.innerText = 'EMPATE'
+            textColor = '--empate-color'
+            break
+    }
+
+    img.src = `/assets/${res}.png`
+    
+    // Alterar cor do texto
+    text.style.color = getComputedStyle(document.documentElement).getPropertyValue(textColor)
+}
+
+function exibirJogadaMaquina(jogadaMaquina, resultado) {
+    // Recuperar elemento img do HTML
+    let img = document.getElementById('jogada-maquina-img')
+
+    let color = 'gray'
+
+    switch (resultado) {
+        case RESULTADO.GANHOU:
+            color = 'red'
+            break
+        case RESULTADO.PERDEU:
+            color = 'green'
+            break
+        default:
+            color = 'gray'
+            break    
+    }
+
+    img.src = `/assets/${jogadaMaquina}-${color}.png`
 }
 
 function alternarLayouts() {

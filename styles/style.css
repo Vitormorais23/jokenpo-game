@@ -8,6 +8,8 @@
 :root {
     --red-color: #f00;
     --white-color: #fff;
+    --ganhou-color: #049c0a;
+    --empate-color: #DDFA2B;
 }
 
 html {
@@ -118,7 +120,7 @@ main {
 }
 
 .positive-button {
-    background: #049c0a;
+    background: var(--ganhou-color);
     margin-bottom: 38px;
 }
 
@@ -133,7 +135,7 @@ main {
 
 .negative-button:hover {
     box-shadow: 0 132px 108px 0 rgba(0, 0, 0, 0.25);
-    background: #0e0e0e;
+    background: #1f1f1f;
 } 
 
 .hidden {
