@@ -1,0 +1,78 @@
+
+@media screen and (max-width: 800px) {
+
+    .options {
+        gap: 30px;
+    }
+
+    .score-card {
+        gap: 40px;
+        padding: 40px 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .options {
+        gap: 20px;
+    }
+
+    .options img {
+        width: 120px;
+    }
+
+    .score-card {
+        gap: 30px;
+        padding: 40px 15px;
+    }
+
+    .score-card p {
+        font-size: 40px;
+    }
+
+    #jogada-jogador-img {
+        width: 110px;
+    }
+
+    #resultado-partida {
+        width: 190px;
+    }
+
+    #jogada-maquina-img {
+        width: 110px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 510px) {
+
+    .options__item {
+        padding: 8px;
+    }
+
+    .options img {
+        width: 100px;
+        margin: auto;
+    }
+
+    #jogada-jogador-img {
+        width: 100px;
+    }
+
+    #resultado-partida {
+        width: 140px;
+    }
+
+    #jogada-maquina-img {
+        width: 100px;
+        margin: auto;
+    }
+
+    .text__button {
+        width: 310px;
+    }
+
+}
+
+@media screen and (max-width: 445px) {
+    
+}
