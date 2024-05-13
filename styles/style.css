@@ -16,6 +16,7 @@ html {
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
+    font-size: 62.5%;
 }
   
 body {
@@ -45,38 +46,38 @@ main {
 
 .home__title {
     color: var(--red-color);
-    font-size: 100px;
+    font-size: 10rem;
     text-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .options {
     display: flex;
-    gap: 96px;
-    margin: 60px 0 125px 0;
+    gap: 9.6rem;
+    margin: 6rem 0 12.5rem 0;
 }
 
 .options__item {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding: 16px;
+    gap: 1.6rem;
+    padding: 1.6rem;
     align-items: center;
 }
 
 .options__item:hover {
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 20px;
+    border-radius: 2rem;
 }
 
 .options__text {
     color: var(--white-color);
-    font-size: 40px;
+    font-size: 4rem;
     text-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .home__subtitle {
     color: var(--white-color);
-    font-size: 44px;
+    font-size: 4.4rem;
     text-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -89,39 +90,39 @@ main {
 .score-card {
     display: flex;
     text-align: center;
-    gap: 60px;
+    gap: 6rem;
     background: rgba(0, 0, 0, 0.59);
-    border-radius: 30px;
-    padding: 40px 95px;
-    margin-bottom: 100px;
+    border-radius: 3rem;
+    padding: 4rem 9.5rem;
+    margin-bottom: 10rem;
 }
 
 .score-card__item{
     display: flex;
     flex-direction: column;
-    gap: 26px;
+    gap: 2.6rem;
 }
 
 .score-card__text {
     color: var(--white-color);
     font-family: inherit;
-    font-size: 48px;
+    font-size: 4.8rem;
     text-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .text__button {
-    border-radius: 10px;
-    width: 360px;
-    padding: 16px 0;
+    border-radius: 1rem;
+    width: 30.6rem;
+    padding: 1.6rem 0;
     box-shadow: 0 132px 108px 0 rgba(0, 0, 0, 0.25);
     text-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25);
     color: var(--white-color);
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 .positive-button {
     background: var(--ganhou-color);
-    margin-bottom: 38px;
+    margin-bottom: 3.8rem;
 }
 
 .positive-button:hover {

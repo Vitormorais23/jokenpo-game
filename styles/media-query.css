@@ -2,43 +2,43 @@
 @media screen and (max-width: 800px) {
 
     .options {
-        gap: 30px;
+        gap: 3rem;
     }
 
     .score-card {
-        gap: 40px;
-        padding: 40px 60px;
+        gap: 4rem;
+        padding: 4rem 6rem;
     }
 }
 
 @media screen and (max-width: 600px) {
     .options {
-        gap: 20px;
+        gap: 2rem;
     }
 
     .options img {
-        width: 120px;
+        width: 12rem;
     }
 
     .score-card {
-        gap: 30px;
-        padding: 40px 15px;
+        gap: 3rem;
+        padding: 4rem 1.5rem;
     }
 
     .score-card p {
-        font-size: 40px;
+        font-size: 4rem;
     }
 
     #jogada-jogador-img {
-        width: 110px;
+        width: 11rem;
     }
 
     #resultado-partida {
-        width: 190px;
+        width: 19rem;
     }
 
     #jogada-maquina-img {
-        width: 110px;
+        width: 11rem;
         margin: auto;
     }
 }
@@ -46,83 +46,83 @@
 @media screen and (max-width: 510px) {
 
     .options__item {
-        padding: 8px;
+        padding: 0.8rem;
     }
 
     .options img {
-        width: 100px;
+        width: 10rem;
         margin: auto;
     }
 
     #jogada-jogador-img {
-        width: 100px;
+        width: 10rem;
     }
 
     #resultado-partida {
-        width: 140px;
+        width: 14rem;
     }
 
     #jogada-maquina-img {
-        width: 100px;
+        width: 10rem;
         margin: auto;
     }
 
     .text__button {
-        width: 310px;
+        width: 31rem;
     }
 
 }
 
 @media screen and (max-width: 445px) {
     .home__title {
-        font-size: 80px;
+        font-size: 8rem;
     }
 
     .options img {
-        width: 85px;
+        width: 8.5rem;
     }
 
     .options__text {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     .home__subtitle {
-        font-size: 40px;
+        font-size: 4rem;
     }
 
     #jogada-jogador-img {
-        width: 85px;
+        width: 8.5rem;
     }
 
     .score-card p {
-        font-size: 30px;
+        font-size: 3rem;
     }
 
     #resultado-partida {
-        width: 110px;
+        width: 11rem;
     }
 
     #jogada-maquina-img {
-        width: 85px;
+        width: 8.5rem;
     }
 
     .text__button {
-        width: 260px;
+        width: 26rem;
     }
 
     .text__button {
-        padding: 12px 0;
-        font-size: 33px;
+        padding: 1.2rem 0;
+        font-size: 3.3rem;
     }
 }
 
 @media screen and (max-width: 370px) {
     .score-card {
-        gap: 20px;
-        padding: 40px 10px;
+        gap: 2rem;
+        padding: 4rem 1rem;
     }
 
     #resultado-partida {
-        width: 100px;
+        width: 10rem;
     }
 }
